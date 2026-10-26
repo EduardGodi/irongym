@@ -38,22 +38,22 @@ void nameGym(){
 }
 
 void menu(){
-	
+
 	borrar();
 	ocultarCursor();
 	int posicion = 0;
 	int nOpciones = 5;
 	bool enMenu = true;
-	
-	string menu[nOpciones]{
+
+	string menu[nOpciones]	{
 	" REGISTRAR CLIENTE ",
 	" TOTAL DE CLIENTES ",
 	" CLIENTES VIP ",
 	" PENDIENTES DE PAGO ",
 	" SALIR "
 	};
-	nameGym();
 	espaciosT();
+	nameGym();
 	while(enMenu){
 		irACoordenada(0,5);
 		for(int i = 0; i < nOpciones; i++){
@@ -67,8 +67,14 @@ void menu(){
 				cout<<" "<<menu[i]<<" "<<endl;
 			}
 		}
+
+		setColor(8);
+		cout<<endl;
+		cout<<"\t\t\t\t  Flechas: mover  |  ENTER: seleccionar"<<endl;
+		setColor(7);
+
 		int tecla = _getch();
-		
+
 		if(tecla == 224){
 			tecla = _getch();
 			if(tecla == 72){
@@ -90,16 +96,15 @@ void menu(){
 				cout<<"Entraste a "<<menu[posicion]<<endl;
 				getch();
 				borrar();
+				nameGym();
 			}
 		}
-		
-			
 	}
-	
+
 }
 
 int main(){
-	
+
 	menu();
 	return 0;
 }
