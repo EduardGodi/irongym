@@ -37,6 +37,75 @@ void nameGym(){
 	cout<<"\t\t\t\t --------------------------------------"<<endl;
 }
 
+void load(){
+	
+	ocultarCursor();
+	char l = 219;
+	int total = 30;
+	cout<<"\n\n\n\n\n\n\n\n";
+	for(int i = 0; i<=total; i++){
+		if(i == total){
+			setColor(10); // verde al completar
+		}else{
+			setColor(6);
+		}
+		cout<<"\r";
+		espaciosT();
+		if(i == total){
+			cout<<"Listo!       ";
+		}else{
+			cout<<"Cargando...  ";
+		}
+		cout<<"[";
+		for(int j = 0; j<total; j++){
+			if(j < i){
+				cout<<l;
+			}else{
+				cout<<" ";
+			}
+		}
+		cout<<"] "<<i*100/total<<"%  ";
+		Sleep(80);
+	}
+	Sleep(500);
+	borrar();
+}
+
+void portada(){
+	string letras[] = {
+	"#   # #   #  ###  ",
+	"#   # ## ## #     ",
+	"#   # # # # #  ## ",
+	"#   # #   # #   # ",
+	" ###  #   #  ###  "
+	};
+	int nLineas = 5;
+
+	//SetConsoleOutputCP(437); 
+	borrar();
+	ocultarCursor();
+	cout<<"\n\n\n\n\n\n";
+	setColor(6);
+	for(int i = 0; i < nLineas; i++){
+		cout<<"\t\t\t\t\t\t   ";
+		for(int j = 0; j < (int)letras[i].size(); j++){
+			if(letras[i][j] == '#'){
+				cout<<(char)219; // bloque solido
+			}else{
+				cout<<letras[i][j];
+			}
+		}
+		cout<<endl;
+	}
+	setColor(7);
+	cout<<"\n\t\t\t\t\t Universidad Mariano Galvez de Guatemala"<<endl;
+	cout<<"\t\t\t\t\t     Catedratico: Ing. Mynor Lapoyeu"<<endl;
+	setColor(8);
+	cout<<"\n\t\t\t\t\t    Presione una tecla para continuar";
+	setColor(7);
+	_getch();
+}
+
 void menu(){
 
 	borrar();
@@ -104,7 +173,8 @@ void menu(){
 }
 
 int main(){
-
+	load();
+	portada();
 	menu();
 	return 0;
 }
