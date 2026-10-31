@@ -1,0 +1,39 @@
+Carlos Mendez
+55501234
+1 0
+Maria Lopez
+55505678
+3 0
+Jose Ramirez
+55509012
+2 100
+Ana Garcia
+55503456
+1 75.5
+Luis Herrera
+55507890
+1 150
+Sofia Castillo
+55502468
+2 0
+Pedro Morales
+55501357
+3 200
+Sofia
+5488-9653
+3 0
+Angel
+5859-7428
+2 250
+Angel
+5859-7428
+3 150
+Eduardo
+5469-8596
+1 0
+Jazmin
+5469-8596
+1 0
+Javier Ortiz
+5874-6965
+1 0
